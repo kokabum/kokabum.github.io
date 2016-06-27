@@ -167,7 +167,8 @@ h1, h2, h3, h4, h5, h6 {
 .user_name {
   color: #455A64;
   font-size: 28px;
-  margin-top: 10px; }
+  margin: 7px 0 0;
+  font-family: "roboto_medium"; }
   @media screen and (max-width: 480px) {
     .user_name {
       font-size: 24px;
@@ -175,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .user_desc {
   color: #667780;
-  margin-top: 8px;
+  margin-top: 5px;
   font-size: 18px; }
   @media screen and (max-width: 480px) {
     .user_desc {
@@ -735,7 +736,7 @@ h1, h2, h3, h4, h5, h6 {
   @media screen and (max-width: 480px) {
     .reviews {
       display: block;
-      margin: 0;
+      margin: 0 10px;
       text-align: left; } }
 
 .review_left {
@@ -924,7 +925,7 @@ h1, h2, h3, h4, h5, h6 {
   .button:last-child {
     border-left: 1px solid rgba(222, 227, 231, 0.5); }
   .button:hover {
-    opacity: .3; }
+    background: #009b86; }
 
 .up {
   padding-bottom: 207px;
