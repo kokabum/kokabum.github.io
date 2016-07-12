@@ -301,7 +301,19 @@ $(document).ready(function(){
 
 });
 
+/*========================*/
+/*        Skills          */
+/*========================*/
 
+$(document).scroll(function () {
+  var aboutOffsetTop = $('.about_bg').offset().top;
+  if($(document).scrollTop() >= aboutOffsetTop){
+    $('.sector').css({
+      "transition": "all 3s",
+      "stroke-dashoffset": "200"
+  });
+  }
+});
 
 /*========================*/
 /*        Blog scroll     */
@@ -356,16 +368,3 @@ function showSection(section, isAnimate) {
     }
 }
 
-/*========================*/
-/*        Skills          */
-/*========================*/
-
-$(document).scroll(function () {
-  var aboutOffsetTop = $('.about_me').offset().top;
-  if($(document).scrollTop() >= aboutOffsetTop){
-    $('.sector').css({
-      "transition": "all 3s",
-      "stroke-dashoffset": "200"
-  });
-  }
-});
