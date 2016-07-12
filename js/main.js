@@ -324,8 +324,37 @@ $(document).scroll(function () {
       "width": "100%"
     });
   }
+
+  var articles = $(".chapters_item ");
+  var contents = $(".chapters_link")
+  var contentsActive = $(".chapters_link_active");
+  var scrollTops = [];
+  for (i = 0; i < articles.length; i++) {
+    if ($(articles[i]).offset().top <= $(window).scrollTop()) {
+      contentsActive.removeClass(".chapters_link_active");
+      $(contents[i]).addClass(".chapters_link_active");
+      contentsActive = $(contents[i]);
+    }
+  };
 });
 
+
+$('.chapters_list .chapters_link').on('click',function (e) {
+    e.preventDefault();
+    showSection($(this).attr('href'),true);
+});
+
+function showSection(section, isAnimate) {
+    var direction = section.replace(/#/, ''),
+        reqSection = $('.blog_article').filter('[data-section="'+direction+'"]'),
+        reqSectionPos = reqSection.offset().top;
+
+    if (isAnimate) {
+        $('body,html').animate({scrollTop:reqSectionPos},500 );
+    } else {
+        $('body,html').scrollTop(reqSectionPos);
+    }
+}
 
 /*========================*/
 /*        Skills          */
