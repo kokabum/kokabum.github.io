@@ -2029,11 +2029,17 @@ h1, h2, h3, h4, h5, h6 {
   width: 25%;
   float: left;
   box-sizing: border-box;
-  padding: 12px 14px 0 21px; }
+  padding: 12px 14px 0 21px;
+  position: relative; }
   @media screen and (max-width: 768px) {
     .blog_chapters {
       float: none;
       display: none; } }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 25%; }
 
 .chapters_list {
   text-align: right;
