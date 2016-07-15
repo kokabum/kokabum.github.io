@@ -675,14 +675,26 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: -230px; } }
 
 .header {
-  background-image: url(../img/bg.jpg);
-  background-size: cover;
   height: 100vh; }
+
+.header_bg {
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+.header_img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 1000px; }
 
 .nav_wrapper {
   padding: 30px;
   position: relative;
-  z-index: 6; }
+  z-index: 6;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box; }
   .nav_wrapper:before, .nav_wrapper:after {
     content: " ";
     display: block; }
@@ -1621,12 +1633,12 @@ h1, h2, h3, h4, h5, h6 {
 /* =================================*/
 .about_bg {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-bottom: -4px; }
+  bottom: -21px;
+  width: 100%; }
 
 .about_me {
-  background-color: #F0EFE9; }
+  background-color: #F0EFE9;
+  position: relative; }
   .about_me:before, .about_me:after {
     content: " ";
     display: block; }
@@ -2079,8 +2091,10 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 14px; } }
 
 .blog {
-  margin-top: 50px;
-  line-height: 1.7; }
+  padding-top: 50px;
+  line-height: 1.7;
+  position: relative;
+  background-color: #fff; }
   .blog:before, .blog:after {
     content: " ";
     display: block; }
