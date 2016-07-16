@@ -1633,8 +1633,11 @@ h1, h2, h3, h4, h5, h6 {
 /* =================================*/
 .about_bg {
   position: absolute;
-  bottom: -21px;
+  bottom: -4px;
   width: 100%; }
+  @media screen and (max-width: 1017px) {
+    .about_bg {
+      bottom: -21px; } }
 
 .about_me {
   background-color: #F0EFE9;
